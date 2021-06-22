@@ -61,7 +61,7 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
     LETTERS: /[a-zA-Z0-9\-]/,
     ATTRIBUTEKEY: /[a-zA-Z0-9-@:$\.]/,
     ATTRIBUTEVALUE: /[^\"]/,
-    Text: /./,
+    Text: /[^>]/,
     commentContent: /[^-]/,
   };
 
