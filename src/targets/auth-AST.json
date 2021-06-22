@@ -1,0 +1,100 @@
+{
+  "identifier": "Program",
+  "Attributes": [],
+  "children": [
+    {
+      "identifier": "section",
+      "Attributes": [
+        {
+          "key": "class",
+          "value": "\"auth\""
+        }
+      ],
+      "children": [
+        {
+          "Attributes": [],
+          "children": [
+            {
+              "identifier": "[[Text]]",
+              "Attributes": [],
+              "value": "  __router-view__  "
+            }
+          ],
+          "elementType": "Text"
+        },
+        {
+          "identifier": "ul",
+          "Attributes": [
+            {
+              "key": "class",
+              "value": "\"left\""
+            }
+          ],
+          "children": [
+            {
+              "identifier": "li",
+              "Attributes": [],
+              "children": [],
+              "elementType": "Element"
+            },
+            {
+              "identifier": "li",
+              "Attributes": [],
+              "children": [],
+              "elementType": "Element"
+            },
+            {
+              "identifier": "li",
+              "Attributes": [],
+              "children": [],
+              "elementType": "Element"
+            }
+          ],
+          "elementType": "Element"
+        },
+        {
+          "Attributes": [],
+          "children": [
+            {
+              "identifier": "[[Comment]]",
+              "Attributes": [],
+              "value": "<!-- I am A Comment -->"
+            }
+          ],
+          "elementType": "Comment"
+        },
+        {
+          "identifier": "ul",
+          "Attributes": [
+            {
+              "key": "class",
+              "value": "\"right\""
+            }
+          ],
+          "children": [
+            {
+              "identifier": "li",
+              "Attributes": [],
+              "children": [],
+              "elementType": "Element"
+            },
+            {
+              "identifier": "li",
+              "Attributes": [],
+              "children": [],
+              "elementType": "Element"
+            },
+            {
+              "identifier": "li",
+              "Attributes": [],
+              "children": [],
+              "elementType": "Element"
+            }
+          ],
+          "elementType": "Element"
+        }
+      ],
+      "elementType": "Element"
+    }
+  ]
+}

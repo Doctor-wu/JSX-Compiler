@@ -6,11 +6,10 @@ const compiler = new JSXCompiler.Compiler();
 // compileTemplates('auth',true);
 // compileTemplates('vform-item',true);
 // compileTemplates('vform',true);
-// compileTemplates('auth');
+compileTemplates('auth');
 // compileTemplates('vform-item');
 // compileTemplates('vform');
-compileTemplates('ShareImage');
-compileTemplates('ShareImage', true);
+// compileTemplates('ShareImage');
 // compiler.compile(`<span class="number">123</span>`)
 // console.log(
 //   JSON.stringify(
@@ -23,16 +22,15 @@ compileTemplates('ShareImage', true);
 //   )
 // );
 
-function compileTemplates(fileName: string, reserve: boolean = false) {
+function compileTemplates(fileName: string) {
   const ast = compiler.compileFile({
-    path: path.resolve(__dirname, `templates/${fileName}.dxml`),
-    reserveParserNode: !!reserve,
+    path: path.resolve(__dirname, `templates/${fileName}.dxml`)
   });
 
   fs.writeFileSync(
     path.resolve(
       __dirname,
-      `./targets/${fileName}${reserve ? "-reserved-" : "-"}AST.json`
+      `./targets/${fileName}-AST.json`
     ),
     JSON.stringify(
       ast,
