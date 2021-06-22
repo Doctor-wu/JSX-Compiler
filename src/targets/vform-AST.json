@@ -1,0 +1,296 @@
+{
+  "identifier": "Program",
+  "Attributes": [],
+  "children": [
+    {
+      "identifier": "div",
+      "Attributes": [
+        {
+          "key": "class",
+          "value": "\"login\""
+        }
+      ],
+      "children": [
+        {
+          "identifier": "h3",
+          "Attributes": [
+            {
+              "key": "v-bind:style",
+              "value": "\"middleStyle\""
+            }
+          ],
+          "children": [
+            {
+              "Attributes": [],
+              "children": [
+                {
+                  "identifier": "[[Text]]",
+                  "Attributes": [],
+                  "value": "{{stateTitle.value}}"
+                }
+              ],
+              "elementType": "Text",
+              "closeSelf": "false"
+            }
+          ],
+          "elementType": "Element",
+          "closeSelf": "false"
+        },
+        {
+          "identifier": "button",
+          "Attributes": [
+            {
+              "key": "@click",
+              "value": "\"$parent.addNumbers\""
+            },
+            {
+              "key": "class",
+              "value": "\"btn btn-6 btn-success goLogin\""
+            }
+          ],
+          "children": [
+            {
+              "Attributes": [],
+              "children": [
+                {
+                  "identifier": "[[Text]]",
+                  "Attributes": [],
+                  "value": "加"
+                }
+              ],
+              "elementType": "Text",
+              "closeSelf": "false"
+            }
+          ],
+          "elementType": "Element",
+          "closeSelf": "false"
+        },
+        {
+          "identifier": "button",
+          "Attributes": [
+            {
+              "key": "@click",
+              "value": "\"$parent.decreaseNumbers\""
+            },
+            {
+              "key": "class",
+              "value": "\"btn btn-6 btn-default\""
+            }
+          ],
+          "children": [
+            {
+              "Attributes": [],
+              "children": [
+                {
+                  "identifier": "[[Text]]",
+                  "Attributes": [],
+                  "value": "减"
+                }
+              ],
+              "elementType": "Text",
+              "closeSelf": "false"
+            }
+          ],
+          "elementType": "Element",
+          "closeSelf": "false"
+        },
+        {
+          "identifier": "slot",
+          "Attributes": [],
+          "children": [],
+          "elementType": "Element",
+          "closeSelf": "false"
+        },
+        {
+          "identifier": "div",
+          "Attributes": [
+            {
+              "key": "key",
+              "value": "\"123\""
+            },
+            {
+              "key": "v-if",
+              "value": "\"showForm.value\""
+            },
+            {
+              "key": "id",
+              "value": "\"login\""
+            },
+            {
+              "key": "style",
+              "value": "\"height: 4rem\""
+            }
+          ],
+          "children": [
+            {
+              "identifier": "VForm",
+              "Attributes": [
+                {
+                  "key": "v-bind:formItem",
+                  "value": "\"formItems\""
+                },
+                {
+                  "key": "ref",
+                  "value": "\"vForm\""
+                }
+              ],
+              "children": [],
+              "elementType": "Element",
+              "closeSelf": "false"
+            }
+          ],
+          "elementType": "Element",
+          "closeSelf": "false"
+        },
+        {
+          "identifier": "div",
+          "Attributes": [
+            {
+              "key": "class",
+              "value": "\".btn-wrap\""
+            }
+          ],
+          "children": [
+            {
+              "identifier": "button",
+              "Attributes": [
+                {
+                  "key": "@click",
+                  "value": "\"handleLogin\""
+                },
+                {
+                  "key": "class",
+                  "value": "\"btn btn-12 btn-success goLogin\""
+                }
+              ],
+              "children": [
+                {
+                  "Attributes": [],
+                  "children": [
+                    {
+                      "identifier": "[[Text]]",
+                      "Attributes": [],
+                      "value": "登录"
+                    }
+                  ],
+                  "elementType": "Text",
+                  "closeSelf": "false"
+                }
+              ],
+              "elementType": "Element",
+              "closeSelf": "false"
+            },
+            {
+              "identifier": "slot",
+              "Attributes": [
+                {
+                  "key": "name",
+                  "value": "\"middle\""
+                }
+              ],
+              "children": [],
+              "elementType": "Element",
+              "closeSelf": "false"
+            },
+            {
+              "identifier": "button",
+              "Attributes": [
+                {
+                  "key": "@click",
+                  "value": "\"changeTitle\""
+                },
+                {
+                  "key": "class",
+                  "value": "\"btn btn-12 btn-default goRegist\""
+                }
+              ],
+              "children": [
+                {
+                  "Attributes": [],
+                  "children": [
+                    {
+                      "identifier": "[[Text]]",
+                      "Attributes": [],
+                      "value": "注册"
+                    }
+                  ],
+                  "elementType": "Text",
+                  "closeSelf": "false"
+                }
+              ],
+              "elementType": "Element",
+              "closeSelf": "false"
+            },
+            {
+              "identifier": "slot",
+              "Attributes": [
+                {
+                  "key": "name",
+                  "value": "\"foot\""
+                }
+              ],
+              "children": [
+                {
+                  "identifier": "p",
+                  "Attributes": [],
+                  "children": [
+                    {
+                      "Attributes": [],
+                      "children": [
+                        {
+                          "identifier": "[[Text]]",
+                          "Attributes": [],
+                          "value": "I am reserve foot slot;"
+                        }
+                      ],
+                      "elementType": "Text",
+                      "closeSelf": "false"
+                    }
+                  ],
+                  "elementType": "Element",
+                  "closeSelf": "false"
+                }
+              ],
+              "elementType": "Element",
+              "closeSelf": "false"
+            },
+            {
+              "identifier": "button",
+              "Attributes": [
+                {
+                  "key": "@click",
+                  "value": "\"toggleForm\""
+                },
+                {
+                  "key": "class",
+                  "value": "\"btn btn-12 btn-default goRegist\""
+                }
+              ],
+              "children": [
+                {
+                  "Attributes": [],
+                  "children": [
+                    {
+                      "identifier": "[[Text]]",
+                      "Attributes": [],
+                      "value": "{{showForm.value ? '隐藏表格' : '显示表格'}}"
+                    }
+                  ],
+                  "elementType": "Text",
+                  "closeSelf": "false"
+                }
+              ],
+              "elementType": "Element",
+              "closeSelf": "false"
+            }
+          ],
+          "elementType": "Element",
+          "closeSelf": "false"
+        }
+      ],
+      "elementType": "Element",
+      "closeSelf": "false"
+    }
+  ],
+  "closeSelf": "false"
+}

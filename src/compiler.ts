@@ -33,7 +33,7 @@ export module JSXCompiler {
       this.ast = this.astParser.createAST(this.tokens);
       this.ast = this.transformer.extractASTParserNode(this.ast);
       this.jsxElement = this.transformer.transform2JSXElement(this.ast);
-      console.log("================== Transform Success! ====================");
+      console.log("Transform Success!");
       console.log("================== Compile Success! ====================");
       return this.ast;
     }

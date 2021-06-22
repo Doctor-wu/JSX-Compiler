@@ -20,7 +20,8 @@
               "value": "  __router-view__  "
             }
           ],
-          "elementType": "Text"
+          "elementType": "Text",
+          "closeSelf": "false"
         },
         {
           "identifier": "ul",
@@ -35,22 +36,26 @@
               "identifier": "li",
               "Attributes": [],
               "children": [],
-              "elementType": "Element"
+              "elementType": "Element",
+              "closeSelf": "false"
             },
             {
               "identifier": "li",
               "Attributes": [],
               "children": [],
-              "elementType": "Element"
+              "elementType": "Element",
+              "closeSelf": "false"
             },
             {
               "identifier": "li",
               "Attributes": [],
               "children": [],
-              "elementType": "Element"
+              "elementType": "Element",
+              "closeSelf": "false"
             }
           ],
-          "elementType": "Element"
+          "elementType": "Element",
+          "closeSelf": "false"
         },
         {
           "Attributes": [],
@@ -61,7 +66,8 @@
               "value": "<!-- I am A Comment -->"
             }
           ],
-          "elementType": "Comment"
+          "elementType": "Comment",
+          "closeSelf": "false"
         },
         {
           "identifier": "ul",
@@ -76,25 +82,31 @@
               "identifier": "li",
               "Attributes": [],
               "children": [],
-              "elementType": "Element"
+              "elementType": "Element",
+              "closeSelf": "false"
             },
             {
               "identifier": "li",
               "Attributes": [],
               "children": [],
-              "elementType": "Element"
+              "elementType": "Element",
+              "closeSelf": "false"
             },
             {
               "identifier": "li",
               "Attributes": [],
               "children": [],
-              "elementType": "Element"
+              "elementType": "Element",
+              "closeSelf": "false"
             }
           ],
-          "elementType": "Element"
+          "elementType": "Element",
+          "closeSelf": "false"
         }
       ],
-      "elementType": "Element"
+      "elementType": "Element",
+      "closeSelf": "false"
     }
-  ]
+  ],
+  "closeSelf": "false"
 }

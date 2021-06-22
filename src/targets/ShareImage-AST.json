@@ -28,7 +28,8 @@
             }
           ],
           "children": [],
-          "elementType": "Element"
+          "elementType": "Element",
+          "closeSelf": "false"
         },
         {
           "identifier": "Text",
@@ -59,10 +60,13 @@
             }
           ],
           "children": [],
-          "elementType": "Element"
+          "elementType": "Element",
+          "closeSelf": "false"
         }
       ],
-      "elementType": "Element"
+      "elementType": "Element",
+      "closeSelf": "false"
     }
-  ]
+  ],
+  "closeSelf": "false"
 }

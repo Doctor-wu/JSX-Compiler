@@ -1,0 +1,122 @@
+{
+  "identifier": "Program",
+  "Attributes": [],
+  "children": [
+    {
+      "identifier": "div",
+      "Attributes": [
+        {
+          "key": "class",
+          "value": "\"vform-item\""
+        },
+        {
+          "key": "style",
+          "value": "\"\""
+        }
+      ],
+      "children": [
+        {
+          "identifier": "label",
+          "Attributes": [
+            {
+              "key": "class",
+              "value": "\"vform-item-label\""
+            },
+            {
+              "key": "v-bind:htmlFor",
+              "value": "\"getItemID()\""
+            },
+            {
+              "key": "style",
+              "value": "\"display: block; width: 100%;\""
+            }
+          ],
+          "children": [
+            {
+              "Attributes": [],
+              "children": [
+                {
+                  "identifier": "[[Text]]",
+                  "Attributes": [],
+                  "value": "        {{labelContent.value}}      "
+                }
+              ],
+              "elementType": "Text",
+              "closeSelf": "false"
+            }
+          ],
+          "elementType": "Element",
+          "closeSelf": "false"
+        },
+        {
+          "identifier": "input",
+          "Attributes": [
+            {
+              "key": "@input",
+              "value": "\"inputHandler\""
+            },
+            {
+              "key": "class",
+              "value": "\"vform-item-control\""
+            },
+            {
+              "key": "v-bind:id",
+              "value": "\"getItemID()\""
+            },
+            {
+              "key": "v-bind:value",
+              "value": "\"$props.value || null\""
+            },
+            {
+              "key": "v-bind:placeholder",
+              "value": "\"placeholder.value\""
+            },
+            {
+              "key": "v-bind",
+              "value": "\"$props.controllConfig\""
+            },
+            {
+              "key": "configurable",
+              "value": ""
+            },
+            {
+              "key": "required",
+              "value": ""
+            }
+          ],
+          "children": [],
+          "elementType": "Element",
+          "closeSelf": "false"
+        },
+        {
+          "identifier": "div",
+          "Attributes": [
+            {
+              "key": "class",
+              "value": "\"vform-item-msgbox\""
+            }
+          ],
+          "children": [
+            {
+              "Attributes": [],
+              "children": [
+                {
+                  "identifier": "[[Text]]",
+                  "Attributes": [],
+                  "value": "{{errMsg.value}}"
+                }
+              ],
+              "elementType": "Text",
+              "closeSelf": "false"
+            }
+          ],
+          "elementType": "Element",
+          "closeSelf": "false"
+        }
+      ],
+      "elementType": "Element",
+      "closeSelf": "false"
+    }
+  ],
+  "closeSelf": "false"
+}
