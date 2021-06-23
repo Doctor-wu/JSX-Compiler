@@ -1,4 +1,5 @@
 import { JSXCompiler } from "./compiler";
+import { createTokenizer, Tokenizer } from "./tokenizer";
 const path = require("path");
 const fs = require("fs");
 

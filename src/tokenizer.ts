@@ -247,7 +247,7 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
   searchJSXAttributeValue(char: string): JSXTokenizer.IStateExcutor {
     if (char === '"') {
       this.currentToken.type = JSXTokenizer.JSXAttributeValue;
-      this.currentToken.value += char;
+      this.currentToken.value = '';
       return this.foundAttributeQuote;
     }
 
@@ -263,8 +263,8 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
 
     if (char === '"') {
       this.currentToken.type = JSXTokenizer.JSXAttributeValue;
-      this.currentToken.value += char;
-      this.emit(this.currentToken);
+      // this.currentToken.value += char;
+      this.emit(this.currentToken, true);
       this.resetCurrentToken();
       return this.searchJSXAttributeKey;
     }
@@ -298,8 +298,8 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
     };
   }
 
-  emit(token: JSXTokenizer.IToken): void {
-    if (!token.value || !token.value.trim()) return;
+  emit(token: JSXTokenizer.IToken, force?:boolean): void {
+    if ((!token.value || !token.value.trim()) && !force) return;
 
     this.tokens.push(token);
   }

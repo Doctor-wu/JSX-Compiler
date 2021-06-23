@@ -73,6 +73,9 @@ export module Transform {
           node.children?.forEach((child) => {
             if (child.type === AST.FinalTokenType.Identifier) {
               identifier = child.value!;
+              element =
+                element ||
+                this.createJSXElement(identifier, Attributes, children, node);
               return;
             }
             if (child.type === AST.ASTNodeType.Attribute) {
@@ -87,10 +90,11 @@ export module Transform {
                 }
 
                 if (item.type === AST.FinalTokenType.AttributeValue) {
-                  attr.value = item.value || true;
+                  attr.value = item.value!;
                   return;
                 }
               });
+              attr.value = attr.value || true;
               Attributes.push(attr);
               return;
             }
@@ -103,25 +107,35 @@ export module Transform {
               return;
             }
             if (child.type === AST.FinalTokenType.Text) {
-              children.push({
-                identifier: "[[Text]]",
-                Attributes: [],
-                value: child.value,
-              });
+              // children.push({
+              //   identifier: "[[Text]]",
+              //   Attributes: [],
+              //   value: child.value,
+              // });
+              element = this.createJSXElement(
+                '[[Text]]',
+                Attributes,
+                children,
+                node
+              );
+              delete element.children;
+              element.value = child.value;
               return;
             }
             if (child.type === AST.ASTNodeType.Expr) {
-              element =
-                element ||
-                this.createJSXElement(identifier, Attributes, children, node);
               buildJSXElement.call(this, child, element);
             }
           });
 
           if (!parent.children) throw TypeError("parent should have children");
-          parent.children.push(
-            this.createJSXElement(identifier!, Attributes, children, node)
-          );
+          if (!element!)
+            element = this.createJSXElement(
+              identifier!,
+              Attributes,
+              children,
+              node
+            );
+          parent.children.push(element);
         }
       }
 

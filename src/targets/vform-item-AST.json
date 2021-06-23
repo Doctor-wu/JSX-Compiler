@@ -7,11 +7,11 @@
       "Attributes": [
         {
           "key": "class",
-          "value": "\"vform-item\""
+          "value": "vform-item"
         },
         {
           "key": "style",
-          "value": "\"\""
+          "value": true
         }
       ],
       "children": [
@@ -20,103 +20,90 @@
           "Attributes": [
             {
               "key": "class",
-              "value": "\"vform-item-label\""
+              "value": "vform-item-label"
             },
             {
               "key": "v-bind:htmlFor",
-              "value": "\"getItemID()\""
+              "value": "getItemID()"
             },
             {
               "key": "style",
-              "value": "\"display: block; width: 100%;\""
+              "value": "display: block; width: 100%;"
             }
           ],
           "children": [
             {
+              "identifier": "[[Text]]",
               "Attributes": [],
-              "children": [
-                {
-                  "identifier": "[[Text]]",
-                  "Attributes": [],
-                  "value": "        {{labelContent.value}}      "
-                }
-              ],
               "elementType": "Text",
-              "closeSelf": "false"
+              "value": "        {{labelContent.value}}      "
             }
           ],
           "elementType": "Element",
-          "closeSelf": "false"
+          "closeSelf": false
         },
         {
           "identifier": "input",
           "Attributes": [
             {
               "key": "@input",
-              "value": "\"inputHandler\""
+              "value": "inputHandler"
             },
             {
               "key": "class",
-              "value": "\"vform-item-control\""
+              "value": "vform-item-control"
             },
             {
               "key": "v-bind:id",
-              "value": "\"getItemID()\""
+              "value": "getItemID()"
             },
             {
               "key": "v-bind:value",
-              "value": "\"$props.value || null\""
+              "value": "$props.value || null"
             },
             {
               "key": "v-bind:placeholder",
-              "value": "\"placeholder.value\""
+              "value": "placeholder.value"
             },
             {
               "key": "v-bind",
-              "value": "\"$props.controllConfig\""
+              "value": "$props.controllConfig"
             },
             {
               "key": "configurable",
-              "value": ""
+              "value": true
             },
             {
               "key": "required",
-              "value": ""
+              "value": true
             }
           ],
           "children": [],
           "elementType": "Element",
-          "closeSelf": "false"
+          "closeSelf": true
         },
         {
           "identifier": "div",
           "Attributes": [
             {
               "key": "class",
-              "value": "\"vform-item-msgbox\""
+              "value": "vform-item-msgbox"
             }
           ],
           "children": [
             {
+              "identifier": "[[Text]]",
               "Attributes": [],
-              "children": [
-                {
-                  "identifier": "[[Text]]",
-                  "Attributes": [],
-                  "value": "{{errMsg.value}}"
-                }
-              ],
               "elementType": "Text",
-              "closeSelf": "false"
+              "value": "{{errMsg.value}}"
             }
           ],
           "elementType": "Element",
-          "closeSelf": "false"
+          "closeSelf": false
         }
       ],
       "elementType": "Element",
-      "closeSelf": "false"
+      "closeSelf": false
     }
-  ],
-  "closeSelf": "false"
+  ]
 }

@@ -163,10 +163,12 @@ export module AST {
       } else if (this.TagHead()) {
         node.elementType = "Element";
         if (this.closeSelf) {
+          node.closeSelf = true;
           this.parentNode = oldParent;
           this.Expr();
           return true;
         }
+        node.closeSelf = false;
         this.parentNode = node;
         if (this.Expr()) {
           this.parentNode = node;

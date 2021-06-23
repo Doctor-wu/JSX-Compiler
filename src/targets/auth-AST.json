@@ -7,28 +7,22 @@
       "Attributes": [
         {
           "key": "class",
-          "value": "\"auth\""
+          "value": "auth"
         }
       ],
       "children": [
         {
+          "identifier": "[[Text]]",
           "Attributes": [],
-          "children": [
-            {
-              "identifier": "[[Text]]",
-              "Attributes": [],
-              "value": "  __router-view__  "
-            }
-          ],
           "elementType": "Text",
-          "closeSelf": "false"
+          "value": "  __router-view__  "
         },
         {
           "identifier": "ul",
           "Attributes": [
             {
               "key": "class",
-              "value": "\"left\""
+              "value": "left"
             }
           ],
           "children": [
@@ -37,25 +31,25 @@
               "Attributes": [],
               "children": [],
               "elementType": "Element",
-              "closeSelf": "false"
+              "closeSelf": false
             },
             {
               "identifier": "li",
               "Attributes": [],
               "children": [],
               "elementType": "Element",
-              "closeSelf": "false"
+              "closeSelf": false
             },
             {
               "identifier": "li",
               "Attributes": [],
               "children": [],
               "elementType": "Element",
-              "closeSelf": "false"
+              "closeSelf": false
             }
           ],
           "elementType": "Element",
-          "closeSelf": "false"
+          "closeSelf": false
         },
         {
           "Attributes": [],
@@ -66,15 +60,14 @@
               "value": "<!-- I am A Comment -->"
             }
           ],
-          "elementType": "Comment",
-          "closeSelf": "false"
+          "elementType": "Comment"
         },
         {
           "identifier": "ul",
           "Attributes": [
             {
               "key": "class",
-              "value": "\"right\""
+              "value": "right"
             }
           ],
           "children": [
@@ -83,30 +76,29 @@
               "Attributes": [],
               "children": [],
               "elementType": "Element",
-              "closeSelf": "false"
+              "closeSelf": false
             },
             {
               "identifier": "li",
               "Attributes": [],
               "children": [],
               "elementType": "Element",
-              "closeSelf": "false"
+              "closeSelf": false
             },
             {
               "identifier": "li",
               "Attributes": [],
               "children": [],
               "elementType": "Element",
-              "closeSelf": "false"
+              "closeSelf": false
             }
           ],
           "elementType": "Element",
-          "closeSelf": "false"
+          "closeSelf": false
         }
       ],
       "elementType": "Element",
-      "closeSelf": "false"
+      "closeSelf": false
     }
-  ],
-  "closeSelf": "false"
+  ]
 }

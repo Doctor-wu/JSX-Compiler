@@ -7,11 +7,11 @@
       "Attributes": [
         {
           "key": "height",
-          "value": "\"268\""
+          "value": "268"
         },
         {
           "key": "width",
-          "value": "\"420\""
+          "value": "420"
         }
       ],
       "children": [
@@ -20,53 +20,52 @@
           "Attributes": [
             {
               "key": "src",
-              "value": "\"avatar.png\""
+              "value": "avatar.png"
             },
             {
               "key": "layout",
-              "value": "\"20/20 50/50\""
+              "value": "20/20 50/50"
             }
           ],
           "children": [],
           "elementType": "Element",
-          "closeSelf": "false"
+          "closeSelf": true
         },
         {
           "identifier": "Text",
           "Attributes": [
             {
               "key": "content",
-              "value": "\"文字内容\""
+              "value": "文字内容"
             },
             {
               "key": "offset",
-              "value": "\"CenterMiddle\""
+              "value": "CenterMiddle"
             },
             {
               "key": "color",
-              "value": "\"#FFFFFF\""
+              "value": "#FFFFFF"
             },
             {
               "key": "FontWeight",
-              "value": "\"true\""
+              "value": "true"
             },
             {
               "key": "FontSize",
-              "value": "\"24\""
+              "value": "24"
             },
             {
               "key": "layout",
-              "value": "\"80/20 420/32\""
+              "value": "80/20 420/32"
             }
           ],
           "children": [],
           "elementType": "Element",
-          "closeSelf": "false"
+          "closeSelf": true
         }
       ],
       "elementType": "Element",
-      "closeSelf": "false"
+      "closeSelf": false
     }
-  ],
-  "closeSelf": "false"
+  ]
 }
