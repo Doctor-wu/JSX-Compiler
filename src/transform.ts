@@ -14,6 +14,7 @@ export module Transform {
 
   export interface ITransformer {
     extractASTParserNode(node: AST.ASTNode): AST.ASTNode;
+    transform2JSXElement(node: AST.ASTNode): JSXElement;
     createJSXElement(
       identifier: string,
       Attributes: JSXAttribute[],
@@ -107,11 +108,6 @@ export module Transform {
               return;
             }
             if (child.type === AST.FinalTokenType.Text) {
-              // children.push({
-              //   identifier: "[[Text]]",
-              //   Attributes: [],
-              //   value: child.value,
-              // });
               element = this.createJSXElement(
                 '[[Text]]',
                 Attributes,

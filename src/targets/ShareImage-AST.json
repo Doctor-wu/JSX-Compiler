@@ -20,7 +20,7 @@
           "Attributes": [
             {
               "key": "src",
-              "value": "avatar.png"
+              "value": "'https://xxx.png'"
             },
             {
               "key": "layout",
@@ -36,15 +36,15 @@
           "Attributes": [
             {
               "key": "content",
-              "value": "文字内容"
+              "value": "'618小铺'"
             },
             {
               "key": "offset",
-              "value": "CenterMiddle"
+              "value": "ShareData.AlignItems.CenterMiddle"
             },
             {
               "key": "color",
-              "value": "#FFFFFF"
+              "value": "'#FFFFFF'"
             },
             {
               "key": "FontWeight",

@@ -3,13 +3,13 @@
   width="420"
 >
   <Image
-    src="avatar.png"
+    src="'https://xxx.png'"
     layout="20/20 50/50"
   />
   <Text
-    content="文字内容"
-    offset="CenterMiddle"
-    color="#FFFFFF"
+    content="'618小铺'"
+    offset="ShareData.AlignItems.CenterMiddle"
+    color="'#FFFFFF'"
     FontWeight="true"
     FontSize="24"
     layout="80/20 420/32"
