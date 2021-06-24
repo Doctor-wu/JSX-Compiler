@@ -60,9 +60,10 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
   RE: JSXTokenizer.REType = {
     LETTERS: /[a-zA-Z0-9\-]/,
     ATTRIBUTEKEY: /[a-zA-Z0-9-@:$\.]/,
-    ATTRIBUTEVALUE: /[^\"]/,
+    ATTRIBUTEVALUE: /[^\"\'\`]/,
     Text: /[^>]/,
     commentContent: /[^-]/,
+    Quote: /['"`]/,
   };
 
   run(input: JSXTokenizer.TokenizerParamter): JSXTokenizer.IToken[] {
@@ -89,6 +90,12 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
       });
       this.resetCurrentToken();
       return this.searchJSXIdentifier;
+    }
+
+    if (this.RE.Quote.test(char)) {
+      this.currentToken.type = JSXTokenizer.Text;
+      this.currentToken.value += `\\${char}`;
+      return this.searchBeginTagStart;
     }
 
     if (this.RE.Text.test(char)) {
@@ -245,9 +252,10 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
 
   @jumpSpace
   searchJSXAttributeValue(char: string): JSXTokenizer.IStateExcutor {
-    if (char === '"') {
+    if (this.RE.Quote.test(char)) {
+      this.currentQuote = char;
       this.currentToken.type = JSXTokenizer.JSXAttributeValue;
-      this.currentToken.value = '';
+      this.currentToken.value = "";
       return this.foundAttributeQuote;
     }
 
@@ -261,12 +269,16 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
       return this.foundAttributeQuote;
     }
 
-    if (char === '"') {
+    if (char === this.currentQuote) {
       this.currentToken.type = JSXTokenizer.JSXAttributeValue;
       // this.currentToken.value += char;
       this.emit(this.currentToken, true);
       this.resetCurrentToken();
       return this.searchJSXAttributeKey;
+    }
+
+    if (this.RE.Quote.test(char)) {
+      this.currentToken.value += `\\${char}`;
     }
     throw TypeError("UnExcepted Error");
   }
@@ -283,11 +295,14 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
       return this.searchJSXIdentifier;
     }
 
+    if (this.RE.Quote.test(char)) {
+      this.currentToken.type = JSXTokenizer.Text;
+      this.currentToken.value += `\\${char}`;
+      return this.foundJSXBeginTagEnd;
+    }
     this.currentToken.type = JSXTokenizer.Text;
     this.currentToken.value += char;
     return this.foundJSXBeginTagEnd;
-
-    throw TypeError("UnExcepted Error");
   }
 
   resetCurrentToken() {
@@ -298,7 +313,7 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
     };
   }
 
-  emit(token: JSXTokenizer.IToken, force?:boolean): void {
+  emit(token: JSXTokenizer.IToken, force?: boolean): void {
     if ((!token.value || !token.value.trim()) && !force) return;
 
     this.tokens.push(token);

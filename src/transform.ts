@@ -136,6 +136,7 @@ export module Transform {
       }
 
       node.children?.forEach((item) => buildJSXElement.call(this, item, root));
+      root.elementType = 'Program';
       return root;
     }
 

@@ -100,5 +100,6 @@
       "elementType": "Element",
       "closeSelf": false
     }
-  ]
+  ],
+  "elementType": "Program"
 }

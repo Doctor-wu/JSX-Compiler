@@ -19,6 +19,10 @@ export module CodeGenerator {
       return this.code;
     }
 
+    Program(node: Transform.JSXElement) {
+      node.children?.forEach((child) => this.generate(child));
+    }
+
     emitLineln(chars: string) {
       this.emitLine(chars);
       this.code += `
@@ -43,9 +47,7 @@ export module CodeGenerator {
         return `shareImage${id++}`;
       };
     })();
-    Program(node: Transform.JSXElement) {
-      node.children?.forEach((child) => this.generate(child));
-    }
+
     ShareImage(node: Transform.JSXElement) {
       this.emitLineln("const shareCard = new ShareData();");
 
@@ -91,6 +93,42 @@ export module CodeGenerator {
       this.emitLineln(`${name}.Y = ${y};`);
       this.emitLineln(`${name}.Width = ${width};`);
       this.emitLineln(`${name}.Height = ${height};`);
+    }
+  }
+
+  export class JSXGenerator extends Generator {
+    generate(
+      this: JSXGenerator & { [props: string]: any },
+      tree: Transform.JSXElement
+    ): string {
+      let method: Function = tree.elementType && this[tree.elementType];
+      if (method) {
+        method.call(this, tree);
+      }
+      return this.code;
+    }
+
+    Text(node: Transform.JSXElement) {
+      this.emitLineln(`View.createText('${node.value}')`);
+    }
+
+    Element(node: Transform.JSXElement) {
+      this.emitLineln(`View.createElement('${node.identifier}',`);
+      if (node.Attributes.length) {
+        this.emitLineln(" {");
+        node.Attributes.forEach((attr) => {
+          this.emitLineln(`"${attr.key}": "${attr.value}",`);
+        });
+        this.emitLineln("},");
+      } else {
+        this.emitLineln("null,");
+      }
+      this.emitLineln("[");
+      node.children?.forEach((child) => {
+        this.generate(child);
+        this.emitLineln(",");
+      });
+      this.emitLineln("])");
     }
   }
 }

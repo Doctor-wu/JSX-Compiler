@@ -13,7 +13,7 @@ export module AST {
   }
 
   export interface ASTElementNode extends ASTNode {
-    elementType?: "Text" | "Element" | "Comment";
+    elementType?: "Text" | "Element" | "Comment" | "Program";
     closeSelf?: Boolean | String;
   }
 
