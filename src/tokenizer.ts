@@ -279,6 +279,7 @@ export class Tokenizer implements JSXTokenizer.ITokenizer {
 
     if (this.RE.Quote.test(char)) {
       this.currentToken.value += `\\${char}`;
+      return this.foundAttributeQuote;
     }
     throw TypeError("UnExcepted Error");
   }

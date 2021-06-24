@@ -7,13 +7,21 @@ const compiler = new JSXCompiler.Compiler();
 // compileTemplates("auth");
 // compileTemplates("vform-item");
 // compileTemplates("vform");
-compileTemplates("vform");
+// compileTemplates("ShareImage");
 // compiler.compile(`<span class="number">123</span>`);
 // console.log(JSON.stringify(compiler.jsxElement, null, 2));
 
-const generator = new CodeGenerator.JSXGenerator();
-if (compiler.jsxElement) generator.generate(compiler.jsxElement);
-fs.writeFileSync(path.resolve(__dirname, "./targets/vform.js"), generator.code);
+compileTemplatesToJS("ShareImage");
+
+function compileTemplatesToJS(fileName: string) {
+  compileTemplates(fileName);
+  const generator = new CodeGenerator.JSXGenerator();
+  if (compiler.jsxElement) generator.generate(compiler.jsxElement);
+  fs.writeFileSync(
+    path.resolve(__dirname, `./targets/${fileName}.js`),
+    generator.code
+  );
+}
 
 function compileTemplates(fileName: string) {
   compiler.compileFile({
