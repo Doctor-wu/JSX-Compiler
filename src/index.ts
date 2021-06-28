@@ -15,7 +15,7 @@ compileTemplatesToJS("ShareImage");
 
 function compileTemplatesToJS(fileName: string) {
   compileTemplates(fileName);
-  const generator = new CodeGenerator.JSXGenerator();
+  const generator = new CodeGenerator.ShareImageGenerator();
   if (compiler.jsxElement) generator.generate(compiler.jsxElement);
   fs.writeFileSync(
     path.resolve(__dirname, `./targets/${fileName}.js`),

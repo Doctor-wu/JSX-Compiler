@@ -66,7 +66,7 @@ export module CodeGenerator {
         if (attr.key === "layout") {
           return this.resolveLayout(attr, name);
         }
-        this.emitLineln(`${name}.${attr.key} = ${attr.value};`);
+        this.emitLineln(`${name}.${attr.key} = '${attr.value}';`);
       });
       this.emitLineln("");
     }
@@ -79,7 +79,7 @@ export module CodeGenerator {
         if (attr.key === "layout") {
           return this.resolveLayout(attr, name);
         }
-        this.emitLineln(`${name}.${attr.key} = ${attr.value};`);
+        this.emitLineln(`${name}.${attr.key} = '${attr.value}';`);
       });
       this.emitLineln("");
     }
